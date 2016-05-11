@@ -14,5 +14,16 @@
     "bower_components",
     "test",
     "tests"
-  ]
+  ],
+  "resolutions": {
+    "jquery": "~2.2.3"
+  },
+  "dependencies": {
+    "bootstrap": "^3.3.6",
+    "easing": "*",
+    "flexisel": "^0.1.1",
+    "handlebars": "^4.0.5",
+    "wow": "^1.1.2",
+    "animate.css": "animate-css#^3.5.1"
+  }
 }
