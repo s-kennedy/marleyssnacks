@@ -1,0 +1,31 @@
+  <div class="footer-copy animated wow bounceInDown" data-wow-duration="1000ms" data-wow-delay="800ms">
+    <div class="container">
+      <div class="footer-copy-grids">
+        <div class="col-md-3 footer-copy-grid">
+          <h3><span>How</span> they're made</h3>
+          <img src="../images/6.jpg" alt=" " class="img-responsive" />
+          <p>Read more about the ingredients and processes we use to make Marley's Snacks.</p>
+        </div>
+        <div class="col-md-6 footer-copy-grid">
+          <h3>Send a <span>message</span></h3>
+          <form action="https://formspree.io/sharonkennedy100@gmail.com" method="POST">
+            <input type="text" name="name" value="Name" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Name';}" required="">
+            <input type="email" name="_replyto" value="Email" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Email';}" required="">
+            <textarea type="text" name="message" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Message...';}" required="">Message...</textarea>
+            <input type="text" name="_gotcha" style="display:none" />
+            <input type="submit" value="Submit" >
+          </form>
+        </div>
+
+        <div class="col-md-3 footer-copy-grid">
+          <h3>Navigation</h3>
+          <ul>
+            {{#each navigation}}
+            <li><a data-scroll href="{{link}}">{{text}}</a></li>
+            {{/each}}
+          </ul>
+        </div>
+        <div class="clearfix"> </div>
+      </div>
+    </div>
+  </div>

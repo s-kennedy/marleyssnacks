@@ -1270,7 +1270,7 @@ h2.typoh2{
 }
 .map-grid iframe{
 	width:100%;
-	min-height:400px;
+  max-height: 370px;
 }
 .map-grid form,.map-grid iframe {
     margin: 2em 0 0;
@@ -1768,7 +1768,7 @@ ul.paging{
 		width: 72%;
 	}
 	.mail-grids {
-		margin: 3em 0 8em;
+		margin: 3em 0 6em;
 	}
 	.map-grid input[type="text"], .map-grid input[type="email"], .map-grid textarea {
 		width: 47.9%;
