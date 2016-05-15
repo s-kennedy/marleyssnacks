@@ -19,7 +19,9 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <link href="../css/style.css" rel="stylesheet" type="text/css" media="all" />
 <script type="text/javascript" src="../js/_bower.js"></script>
 <script type="text/javascript" src="../js/move-top.js"></script>
+<script type="text/javascript" src="../js/hbs.js"></script>
 <script type="text/javascript" src="../js/templates.js"></script>
+<script type="text/javascript" src="../js/maps.js"></script>
 <!-- animation-effect -->
 <script>
  new WOW().init();
@@ -44,38 +46,9 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 	<div class="banner-figures">
 		<div class="banner">
 			<div class="container banner-drop">
-				<div class="header">
-					<script id="header-left-template" type="text/x-handlebars-template">
-					  <div class="header-left">
-					    <ul>
-					      <li class="animated wow fadeInLeftBig" data-wow-duration="1200ms" data-wow-delay="800ms"><span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span> {{ address }} </li>
-					      <li class="animated wow fadeInLeftBig" data-wow-duration="1200ms" data-wow-delay="900ms"><span class="glyphicon glyphicon-earphone" aria-hidden="true"></span> {{ phone }}</li>
-					      <li class="animated wow fadeInLeftBig" data-wow-duration="1200ms" data-wow-delay="1000ms"><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span> <a href="mailto:info@example.com">{{ email }}</a></li>
-					    </ul>
-					  </div>
-					</script>
-					  <div class="header-right">
-					    <nav>
-					      <ul>
-					      <li class="active">
-					        <a href="index.html"><i class="glyphicon glyphicon-home" aria-hidden="true"></i><span>Home</span></a>
-					      </li>
-					      <li>
-					        <a href="about.html"><i class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></i><span>Products</span></a>
-					      </li>
-					      <li>
-					        <a href="short-codes.html"><i class="glyphicon glyphicon-text-size" aria-hidden="true"></i><span>Where to buy</span></a>
-					      </li>
-					      <li>
-					        <a href="blog.html"><i class="glyphicon glyphicon-picture" aria-hidden="true"></i><span>Blog</span></a>
-					      </li>
-					      <li>
-					        <a href="contact.html"><i class="glyphicon glyphicon-envelope" aria-hidden="true"></i><span>Contact Us</span></a>
-					      </li>
-					      </ul>
-					    </nav>
-					    <div class="menu-icon animated wow zoomIn" data-wow-duration="1000ms" data-wow-delay="800ms"><span></span></div>
-					  </div>
+				<div class="header"> 
+						<!-- append left-header template -->
+						<!-- append right-header template -->
 					  <div class="clearfix"> </div>
 				</div>
 				<div class="logo animated wow bounceInDown" data-wow-duration="1000ms" data-wow-delay="500ms">
@@ -83,172 +56,43 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 				</div>
 				<div class="social-icons animated wow bounceInDown" data-wow-duration="1000ms" data-wow-delay="800ms">
 					<ul>
-						<li><a href="#" class="twitter"></a></li>
-						<li><a href="#" class="facebook"></a></li>
-						<li><a href="#" class="google"></a></li>
+						<li><a href="https://www.facebook.com/groups/717613388317899/" class="facebook"></a></li>
 					</ul>
 				</div>
 			</div>
 		</div>
-			<script>
-				(function($){
-				  $(".menu-icon").on("click", function(){
-						$(this).toggleClass("open");
-						$(".container").toggleClass("nav-open");
-						$("nav ul li").toggleClass("animate");
-				  });
-				  
-				})(jQuery);
-			</script>
 	</div>
 <!-- //banner -->
 <!-- banner-bottom -->
-	<div class="banner-bottom animated wow lightSpeedIn" data-wow-duration="1500ms" data-wow-delay="800ms">
-		<ul id="flexiselDemo1">	
-			<li>
-				<div class="item item-sub">
-					<div class="item1">
-						<i class="glyphicon glyphicon-cutlery" aria-hidden="true"></i>
-						<h3>Beef liver</h3>
-					</div>
-					<div class="p-mask">
-						<h4>Beef liver</h4>
-						<p>Neque porro quisquam est, qui dolorem ipsum quia dolor sit
-							amet, consectetur, adipisci velit.</p>
-						<div class="social-icons">
-							<ul>
-								<li><a href="#" class="twitter"></a></li>
-								<li><a href="#" class="facebook"></a></li>
-								<li><a href="#" class="google"></a></li>
-							</ul>
-						</div>
-					</div>
-				</div>
-			</li>
-			<li>
-				<div class="item item-sub1">
-					<div class="item1">
-						<i class="glyphicon glyphicon-cutlery" aria-hidden="true"></i>
-						<h3>Duck feet</h3>
-					</div>
-					<div class="p-mask">
-						<h4>Duck feet</h4>
-						<p>Neque porro quisquam est, qui dolorem ipsum quia dolor sit
-							amet, consectetur, adipisci velit.</p>
-						<div class="social-icons">
-							<ul>
-								<li><a href="#" class="twitter"></a></li>
-								<li><a href="#" class="facebook"></a></li>
-								<li><a href="#" class="google"></a></li>
-							</ul>
-						</div>
-					</div>
-				</div>
-			</li>
-			<li>
-				<div class="item item-sub2">
-					<div class="item1">
-						<i class="glyphicon glyphicon-cutlery" aria-hidden="true"></i>
-						<h3>Salmon tails</h3>
-					</div>
-					<div class="p-mask">
-						<h4>Salmon tails</h4>
-						<p>Neque porro quisquam est, qui dolorem ipsum quia dolor sit
-							amet, consectetur, adipisci velit.</p>
-						<div class="social-icons">
-							<ul>
-								<li><a href="#" class="twitter"></a></li>
-								<li><a href="#" class="facebook"></a></li>
-								<li><a href="#" class="google"></a></li>
-							</ul>
-						</div>
-					</div>
-				</div>
-			</li>
-			<li>
-				<div class="item item-sub3">
-					<div class="item1">
-						<i class="glyphicon glyphicon-cutlery" aria-hidden="true"></i>
-						<h3>Beef liver</h3>
-					</div>
-					<div class="p-mask">
-						<h4>Beef liver</h4>
-						<p>Neque porro quisquam est, qui dolorem ipsum quia dolor sit
-							amet, consectetur, adipisci velit.</p>
-						<div class="social-icons">
-							<ul>
-								<li><a href="#" class="twitter"></a></li>
-								<li><a href="#" class="facebook"></a></li>
-								<li><a href="#" class="google"></a></li>
-							</ul>
-						</div>
-					</div>
-				</div>
-			</li>
-		</ul>
-			<script type="text/javascript">
-				$(window).load(function() {
-				$("#flexiselDemo1").flexisel({
-					visibleItems: 4,
-					animationSpeed: 1000,
-					autoPlay: true,
-					autoPlaySpeed: 3000,    		
-					pauseOnHover: true,
-					enableResponsiveBreakpoints: true,
-					responsiveBreakpoints: { 
-						portrait: { 
-							changePoint:480,
-							visibleItems: 1
-						}, 
-						landscape: { 
-							changePoint:640,
-							visibleItems: 2
-						},
-						tablet: { 
-							changePoint:768,
-							visibleItems: 3
-						}
-					}
-				});
-				
-			 });
-			</script>
+	<div class="banner-bottom animated wow lightSpeedIn product-list" id="products" data-wow-duration="1500ms" data-wow-delay="800ms">
 	</div>
 <!-- //banner-bottom -->
 <!-- banner-bottom-grids -->
-	<div class="banner-bottom-grids">
+	<div class="banner-bottom-grids" id="story">
 		<div class="col-md-7 banner-bottom-grid-left animated wow fadeInLeft" data-wow-duration="1000ms" data-wow-delay="500ms">
-			<h2>How do we make <span>Marley's Snacks?</span></h2>
-			<p>Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil 
-				molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur
-				ut labore et dolore magnam.</p>
-			<div class="more">
-				<a href="single.html">Learn More...</a>
-			</div>
+			<h2>Our <span>Story</span></h2>
+			<p>Marley is a small and spunky pup with a picky appetite. Every day, her owner Robin would offer her a new kind of treat. But Marley just didn't like any of the storebought treats. Then one day, Robin decided to make his own dog treats. He started with beef liver snacks. Marley loved them! So Robin tried making more, this time from chicken feet. Marley loved those too! Robin kept making snacks for Marley and Marley's friends at the dog park, experimenting with different ingredients. Finally, Robin decided to start a business to share Marley's favourite snacks with dogs everywhere! </p>
+<!-- 			<div class="more">
+				<a href="single.html">How they're made</a>
+			</div> -->
 		</div>
 		<div class="col-md-5 banner-bottom-grid animated wow fadeInRight" data-wow-duration="1000ms" data-wow-delay="500ms">
-			<img src="../images/6.jpg" alt=" " class="img-responsive" />
-			<div class="banner-bottom-grid1">
-				<div class="banner-bottom-grid1-pos animated wow fadeInUpBig" data-wow-duration="1000ms" data-wow-delay="500ms">
-					<h3></h3>
-				</div>
-			</div>
+			<img src="../images/10.jpg" alt=" " class="img-responsive" />
 		</div>
 		<div class="clearfix"> </div>
 	</div>
 	<div class="banner-bottom-grids">
 		<div class="col-md-4 banner-bottom-grid-sub animated wow fadeInLeft" data-wow-duration="1000ms" data-wow-delay="500ms">
-			<img src="../images/7.jpg" alt=" " class="img-responsive" />
+			<!-- <img src="../images/9.jpg" alt=" " class="img-responsive" /> -->
 			<div class="banner-bottom-grid-sub1">
 				<div class="banner-bottom-grid-sub-pos">
-					<h3><span>god gives us</span> the ingredients for our daily <i>Bread</i>
-						but he expects us to do the <span>Baking !</span></h3>
+					<h3>Where to buy</h3>
+					<p style="color: #fff;">Visit any of these local pet supply shops to find Marley's Snacks.</p>
 				</div>
 			</div>
 		</div>
-		<div class="col-md-8 banner-bottom-grid-left1 animated wow fadeInLeft" data-wow-duration="1000ms" data-wow-delay="1000ms">
-			<p>For it is we who must pray for our daily bread, and if he grants it to us, it is only through
-				our labour, our skill and preparation</p>
+		<div class="col-md-8 locations animated wow fadeInRight" data-wow-duration="1000ms" data-wow-delay="1000ms">
+			<div id="locations-map"></div>
 		</div>
 		<div class="clearfix"> </div>
 	</div>
@@ -259,7 +103,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 			<h3>For more information feel free to <span>call or email</span></h3>
 			<p>Ask for <span>Robin :)</span></p>
 			<div class="more">
-				<a href="mail.html">Contact Us</a>
+				<a href="contact.html">Contact Us</a>
 			</div>
 			<div class="footer-top-image">
 				<img src="../images/1.png" alt=" " class="img-responsive" />
@@ -272,13 +116,12 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 		<div class="container">
 			<div class="footer-copy-grids">
 				<div class="col-md-3 footer-copy-grid">
-					<h3>About <span>Bakery</span></h3>
+					<h3><span>How</span> they're made</h3>
 					<img src="../images/6.jpg" alt=" " class="img-responsive" />
-					<p>But I must explain to you how all this mistaken idea of denouncing pleasure 
-						and praising pain was born.</p>
+					<p>Read more about the ingredients and processes we use to make Marley's Snacks.</p>
 				</div>
-				<div class="col-md-3 footer-copy-grid">
-					<h3>Contact <span>Us</span></h3>
+				<div class="col-md-6 footer-copy-grid">
+					<h3>Send a <span>message</span></h3>
 					<form>
 						<input type="text" value="Name" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Name';}" required="">
 						<input type="email" value="Email" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Email';}" required="">
@@ -286,40 +129,13 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 						<input type="submit" value="Submit" >
 					</form>
 				</div>
-				<div class="col-md-3 footer-copy-grid">
-					<h3>Popular <span>Items</span></h3>
-					<div class="footer-copy-grids">
-						<div class="col-xs-4 footer-copy-grid1">
-							<a href="single.html"><img src="../images/1.jpg" alt=" " class="img-responsive" /></a>
-						</div>
-						<div class="col-xs-4 footer-copy-grid1">
-							<a href="single.html"><img src="../images/2.jpg" alt=" " class="img-responsive" /></a>
-						</div>
-						<div class="col-xs-4 footer-copy-grid1">
-							<a href="single.html"><img src="../images/3.jpg" alt=" " class="img-responsive" /></a>
-						</div>
-						<div class="clearfix"> </div>
-					</div>
-					<div class="footer-copy-grids">
-						<div class="col-xs-4 footer-copy-grid1">
-							<a href="single.html"><img src="../images/4.jpg" alt=" " class="img-responsive" /></a>
-						</div>
-						<div class="col-xs-4 footer-copy-grid1">
-							<a href="single.html"><img src="../images/5.jpg" alt=" " class="img-responsive" /></a>
-						</div>
-						<div class="col-xs-4 footer-copy-grid1">
-							<a href="single.html"><img src="../images/2.jpg" alt=" " class="img-responsive" /></a>
-						</div>
-						<div class="clearfix"> </div>
-					</div>
-				</div>
+
 				<div class="col-md-3 footer-copy-grid">
 					<h3>Navigation</h3>
 					<ul>
-						<li><a href="mail.html">Mail Us</a></li>
-						<li><a href="blog.html">Blog</a></li>
-						<li><a href="about.html">About Us</a></li>
-						<li><a href="short-codes.html">Short Codes</a></li>
+						<li><a data-scroll href="#products">Product list</a></li>
+						<li><a data-scroll href="#locations-map">Where to buy</a></li>
+						<li><a href="contact.html">Contact us</a></li>
 					</ul>
 				</div>
 				<div class="clearfix"> </div>
@@ -345,8 +161,12 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 			*/
 								
 			$().UItoTop({ easingType: 'easeOutQuart' });
+			smoothScroll.init();
 								
 			});
+	</script>
+	<script async defer
+	  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBb3K2FpdLjsWXYY0weNkPKTbmKjw5Xs8I&callback=loadMap">
 	</script>
 <!-- //here ends scrolling icon -->
 </body>

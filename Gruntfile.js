@@ -9,7 +9,8 @@ module.exports = function(grunt) {
           'css': 'build/css/_bower.css'
         },
         mainFiles: {
-          bootstrap: 'dist/css/bootstrap.min.css'
+          bootstrap: 'dist/css/bootstrap.min.css',
+          'smooth-scroll': 'dist/js/smooth-scroll.min.js' 
         },
         bowerOptions: {
           relative: false
@@ -36,7 +37,11 @@ module.exports = function(grunt) {
     handlebars: {
       compile: {
         options: {
-          namespace: 'Marley.Templates'
+          namespace: 'Marley.Templates',
+          processName: function(filePath) {
+            var pieces = filePath.split('/');
+            return pieces[pieces.length - 1].split('.')[0];
+          }
         },
         files: {
           'build/js/hbs.js': 'src/templates/*.hbs'

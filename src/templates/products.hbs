@@ -1,0 +1,49 @@
+<ul id="flexiselDemo1"> 
+  {{#each products }}
+  <li>
+    <div class="item {{itemsub}}">
+      <div class="item1">
+        <i class="glyphicon glyphicon-cutlery" aria-hidden="true"></i>
+        <h3>{{title}}</h3>
+      </div>
+      <div class="p-mask">
+        {{!-- <h4>{{title}}</h4> --}}
+        <p>{{description}}</p>
+        <div class="price">
+          <ul>
+            <li><p>{{price}}</p></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </li>
+  {{/each}}
+
+  <script type="text/javascript">
+    $(window).load(function() {
+    $("#flexiselDemo1").flexisel({
+      visibleItems: 5,
+      animationSpeed: 1000,
+      autoPlay: true,
+      autoPlaySpeed: 3000,        
+      pauseOnHover: true,
+      enableResponsiveBreakpoints: true,
+      responsiveBreakpoints: { 
+        portrait: { 
+          changePoint:480,
+          visibleItems: 1
+        }, 
+        landscape: { 
+          changePoint:640,
+          visibleItems: 2
+        },
+        tablet: { 
+          changePoint:768,
+          visibleItems: 3
+        }
+      }
+    });
+    
+   });
+  </script>
+</ul>

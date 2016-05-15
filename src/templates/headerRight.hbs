@@ -1,0 +1,22 @@
+<div class="header-right">
+  <nav>
+    <ul>
+    {{#each menuItems}}
+    <li>
+      <a data-scroll href="{{ link }}"><i class="glyphicon {{ icon }}" aria-hidden="true"></i><span>{{ text }}</span></a>
+    </li>
+    {{/each}}
+    </ul>
+  </nav>
+  <div class="menu-icon animated wow zoomIn" data-wow-duration="1000ms" data-wow-delay="800ms"><span></span></div>
+</div>
+<script>
+  (function($){
+    $(".menu-icon").on("click", function(){
+      $(this).toggleClass("open");
+      $(".container").toggleClass("nav-open");
+      $("nav ul li").toggleClass("animate");
+    });
+    
+  })(jQuery);
+</script>

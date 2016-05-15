@@ -413,7 +413,7 @@ padding: 70px 0 165px 0;
 	-ms-background-size:cover;
 }
 .item-sub1{
-	background:url(../images/2.jpg) no-repeat 0px 0px;
+	background:url(../images/chicken_feet.jpg) no-repeat 0px 0px;
 	background-size:cover;
 	-webkit-background-size:cover;
 	-moz-background-size:cover;
@@ -421,7 +421,7 @@ padding: 70px 0 165px 0;
 	-ms-background-size:cover;
 }
 .item-sub2{
-	background:url(../images/3.jpg) no-repeat 0px 0px;
+	background:url(../images/beef_liver.jpg) no-repeat 0px 0px;
 	background-size:cover;
 	-webkit-background-size:cover;
 	-moz-background-size:cover;
@@ -436,7 +436,15 @@ padding: 70px 0 165px 0;
 	-o-background-size:cover;
 	-ms-background-size:cover;
 }
-.item-sub3,.item-sub,.item-sub1,.item-sub2{
+.item-sub4{
+  background:url(../images/sweet_potato.jpg) no-repeat 0px 0px;
+  background-size:cover;
+  -webkit-background-size:cover;
+  -moz-background-size:cover;
+  -o-background-size:cover;
+  -ms-background-size:cover;
+}
+.item-sub3,.item-sub,.item-sub1,.item-sub2,.item-sub4{
 	min-height:480px;
 }
 .item1 i{
@@ -508,8 +516,13 @@ padding: 70px 0 165px 0;
 }
 /*-- //banner-bottom --*/
 /*-- banner-bottom-grids --*/
+.banner-bottom-grids{
+  min-height: 24em;
+}
+
 .banner-bottom-grid,.banner-bottom-grid-left,.banner-bottom-grid-sub{
 	padding:0;
+  min-height: inherit;
 }
 .banner-bottom-grid-left{
 	padding:7em 0 0 12em;
@@ -559,9 +572,13 @@ padding: 70px 0 165px 0;
 .banner-bottom-grid1-pos,.banner-bottom-grid-sub-pos{
 	padding:2em;
 	border: 1px solid #DFDEDC;
+  min-height: 100%;
 }
 .banner-bottom-grid,.banner-bottom-grid-sub{
 	position:relative;
+}
+.banner-bottom-grid-sub{
+  background:url(../images/9.jpg) no-repeat 0px 0px;
 }
 .banner-bottom-grid1-pos h3{
 	font-size: 2.5em;
@@ -628,6 +645,14 @@ padding: 70px 0 165px 0;
 	position:absolute;
 	top:0%;
 	left:0%;
+}
+.locations {
+  padding: 0;
+  min-height: inherit;
+}
+#locations-map {
+  min-height: inherit;
+  width: 100%;
 }
 /*-- //banner-bottom-grids --*/
 /*-- footer-top --*/
@@ -1608,7 +1633,7 @@ ul.paging{
 	}
 }
 @media (max-width:1366px){
-	.item-sub3, .item-sub, .item-sub1, .item-sub2 {
+	.item-sub3, .item-sub, .item-sub1, .item-sub2, .item-sub4 {
 		min-height: 350px;
 	}
 	.item1 h3 {
@@ -1767,7 +1792,7 @@ ul.paging{
 	.header-right nav {
 		left: 8%;
 	}
-	.item-sub3, .item-sub, .item-sub1, .item-sub2 {
+	.item-sub3, .item-sub, .item-sub1, .item-sub2, .item-sub4 {
 		min-height: 255px;
 	}
 	.item1 h3 {
