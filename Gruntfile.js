@@ -53,7 +53,7 @@ module.exports = function(grunt) {
         files: [
           { expand: true, flatten: true, src: ['src/images/*'], dest: 'build/images' },
           { expand: true, flatten: true, src: ['src/fonts/*'], dest: 'build/fonts'},
-          { expand: true, flatten: true, src: ['src/files/*'], dest: 'build/files'},
+          { expand: true, flatten: true, src: ['src/files/*'], dest: 'build'},
           { expand: true, flatten: true, src: ['src/css/style.css'], dest: 'build/css'},
           { expand: true, flatten: true, src: ['src/js/*'], dest: 'build/js'},
           ]
