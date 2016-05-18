@@ -1,19 +1,18 @@
 $(function() {
 
-  var headerLeftContext = { address: "1014 Dundas Street West, Toronto",
+  var contactInfo = { address: "1014 Dundas Street West, Toronto",
                   phone: "(647) 977-9394",
                   email: "marleyssnacks@gmail.com"
                 }
 
-  var navigationContext = { navigation: [
-      { link: 'index.html', icon: 'glyphicon-home', text: 'Home' },
-      { link: 'index.html#products', icon: 'glyphicon-list', text: 'Products' },
-      { link: 'index.html#locations-map', icon: 'glyphicon-map-marker', text: 'Where to buy' }, 
-      { link: 'contact.html', icon: 'glyphicon-envelope', text: 'Contact' }
+  var navigation = { navigation: [
+      { link: '/', icon: 'glyphicon-home', text: 'Home' },
+      { link: '/products', icon: 'glyphicon-list', text: 'Products' },
+      { link: '/contact', icon: 'glyphicon-envelope', text: 'Contact' }
     ]
   }
 
-  var productsContext = { products: [
+  var productList = [
       { 
         itemsub: "item-sub",
         image: '1.jpg',
@@ -49,14 +48,23 @@ $(function() {
         description: 'Specially made for sweet doggies.',
         price: '$27 for 1 kilo'
       },
+      { 
+        itemsub: "item-sub5",
+        title: 'Cow lung',
+        image: 'sweet_potato.jpg',
+        description: 'A light and delicious snack.',
+        price: '$30 for 1 kilo'
+      },
     ]
-  }
 
-  $('div.header').append(Marley.Templates.headerLeft(headerLeftContext));
-  $('div.header').append(Marley.Templates.headerRight(navigationContext));
-  $('div.product-list').append(Marley.Templates.products(productsContext));
-  $('div.product-details').append(Marley.Templates.productDetails(productsContext))
+  var allProducts = { products: productList.slice() }
+  var highlightedProducts = { products: productList.slice(0,5) }
+
+  $('div.header').append(Marley.Templates.headerLeft(contactInfo));
+  $('div.header').append(Marley.Templates.headerRight(navigation));
+  $('div.product-list').append(Marley.Templates.products(highlightedProducts));
+  $('div.product-details').append(Marley.Templates.productDetails(allProducts))
   $('div.contact-section').append(Marley.Templates.contactSection({}))
-  $('div.big-footer').append(Marley.Templates.bigFooter(navigationContext))
+  $('div.big-footer').append(Marley.Templates.bigFooter(navigation))
   $('div.little-footer').append(Marley.Templates.littleFooter({}))
 })

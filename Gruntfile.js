@@ -10,7 +10,9 @@ module.exports = function(grunt) {
         },
         mainFiles: {
           bootstrap: 'dist/css/bootstrap.min.css',
-          'smooth-scroll': 'dist/js/smooth-scroll.min.js' 
+          'smooth-scroll': 'dist/js/smooth-scroll.min.js',
+          masonry: 'dist/masonry.pkgd.min.js',
+          wow: 'dist/wow.min.js' 
         },
         bowerOptions: {
           relative: false
