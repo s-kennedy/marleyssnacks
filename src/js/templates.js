@@ -6,10 +6,9 @@ $(function() {
                 }
 
   var navigationContext = { navigation: [
-      { link: 'index.html', icon: 'glyphicon-home', text: 'Home' },
-      { link: 'index.html#products', icon: 'glyphicon-list', text: 'Products' },
-      { link: 'index.html#locations-map', icon: 'glyphicon-map-marker', text: 'Where to buy' }, 
-      { link: 'contact.html', icon: 'glyphicon-envelope', text: 'Contact' }
+      { link: '/', icon: 'glyphicon-home', text: 'Home' },
+      { link: '/products', icon: 'glyphicon-list', text: 'Products' },
+      { link: '/contact', icon: 'glyphicon-envelope', text: 'Contact' }
     ]
   }
 
