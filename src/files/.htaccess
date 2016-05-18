@@ -1,4 +1,6 @@
 RewriteEngine On
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteRule ^([^.]+)$ $1.html [NC,L]
-DirectoryIndex index.html error.html
+DirectoryIndex index.html contact.html products.html
+ErrorDocument 404 http://marleyssnacks.com/error
+ErrorDocument 500 http://marleyssnacks.com/error

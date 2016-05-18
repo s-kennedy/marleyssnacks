@@ -50,6 +50,15 @@ body a:hover{
 	-ms-background-size:cover;
 	min-height:500px;
 }
+.error{
+  background:url(../images/11.jpg) no-repeat 0px 0px;
+  background-size:cover;
+  -webkit-background-size:cover;
+  -moz-background-size:cover;
+  -o-background-size:cover;
+  -ms-background-size:cover;
+  min-height:500px; 
+}
 .header{
 	padding:5em 0 13em;
     text-align: center;

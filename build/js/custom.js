@@ -1,10 +1,14 @@
-this["Marley"] = this["Marley"] || {};
+/* UItoTop jQuery Plugin 1.2 | Matt Varone | http://www.mattvarone.com/web-design/uitotop-jquery-plugin */
+(function($){$.fn.UItoTop=function(options){var defaults={text:'To Top',min:200,inDelay:600,outDelay:400,containerID:'toTop',containerHoverID:'toTopHover',scrollSpeed:1000,easingType:'linear'},settings=$.extend(defaults,options),containerIDhash='#'+settings.containerID,containerHoverIDHash='#'+settings.containerHoverID;$('body').append('<a href="#" id="'+settings.containerID+'">'+settings.text+'</a>');$(containerIDhash).hide().on('click.UItoTop',function(){$('html, body').animate({scrollTop:0},settings.scrollSpeed,settings.easingType);$('#'+settings.containerHoverID,this).stop().animate({'opacity':0},settings.inDelay,settings.easingType);return false;}).prepend('<span id="'+settings.containerHoverID+'"></span>').hover(function(){$(containerHoverIDHash,this).stop().animate({'opacity':1},600,'linear');},function(){$(containerHoverIDHash,this).stop().animate({'opacity':0},700,'linear');});$(window).scroll(function(){var sd=$(window).scrollTop();if(typeof document.body.style.maxHeight==="undefined"){$(containerIDhash).css({'position':'absolute','top':sd+$(window).height()-50});}
+if(sd>settings.min)
+$(containerIDhash).fadeIn(settings.inDelay);else
+$(containerIDhash).fadeOut(settings.Outdelay);});};})(jQuery);;this["Marley"] = this["Marley"] || {};
 this["Marley"]["Templates"] = this["Marley"]["Templates"] || {};
 
 this["Marley"]["Templates"]["bigFooter"] = Handlebars.template({"1":function(container,depth0,helpers,partials,data) {
     var helper, alias1=depth0 != null ? depth0 : {}, alias2=helpers.helperMissing, alias3="function", alias4=container.escapeExpression;
 
-  return "            <li><a data-scroll href=\""
+  return "            <li><a href=\""
     + alias4(((helper = (helper = helpers.link || (depth0 != null ? depth0.link : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"link","hash":{},"data":data}) : helper)))
     + "\">"
     + alias4(((helper = (helper = helpers.text || (depth0 != null ? depth0.text : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"text","hash":{},"data":data}) : helper)))
@@ -12,13 +16,13 @@ this["Marley"]["Templates"]["bigFooter"] = Handlebars.template({"1":function(con
 },"compiler":[7,">= 4.0.0"],"main":function(container,depth0,helpers,partials,data) {
     var stack1;
 
-  return "  <div class=\"footer-copy animated wow bounceInDown\" data-wow-duration=\"1000ms\" data-wow-delay=\"800ms\">\n    <div class=\"container\">\n      <div class=\"footer-copy-grids\">\n        <div class=\"col-md-3 footer-copy-grid\">\n          <a href=\"/products\"><h3><span>Product </span>list </h3></a>\n          <img src=\"images/6.jpg\" alt=\" \" class=\"img-responsive\" />\n          <p> Check out our full selection of snacks.</p>\n        </div>\n        <div class=\"col-md-6 footer-copy-grid\">\n          <h3>Send a <span>message</span></h3>\n          <form action=\"https://formspree.io/marleyssnacks@gmail.com\" method=\"POST\">\n            <input type=\"text\" name=\"name\" value=\"Name\" onfocus=\"this.value = '';\" onblur=\"if (this.value == '') {this.value = 'Name';}\" required=\"\">\n            <input type=\"email\" name=\"_replyto\" value=\"Email\" onfocus=\"this.value = '';\" onblur=\"if (this.value == '') {this.value = 'Email';}\" required=\"\">\n            <textarea type=\"text\" name=\"message\" onfocus=\"this.value = '';\" onblur=\"if (this.value == '') {this.value = 'Message...';}\" required=\"\">Message...</textarea>\n            <input type=\"text\" name=\"_gotcha\" style=\"display:none\" />\n            <input type=\"submit\" value=\"Submit\" >\n          </form>\n        </div>\n\n        <div class=\"col-md-3 footer-copy-grid\">\n          <h3>Navigation</h3>\n          <ul>\n"
+  return "  <div class=\"footer-copy animated wow bounceInDown\" data-wow-duration=\"1000ms\" data-wow-delay=\"800ms\">\n    <div class=\"container\">\n      <div class=\"footer-copy-grids\">\n        <div class=\"col-md-3 footer-copy-grid\">\n          <a href=\"/products\"><h3><span>Product </span>list </h3></a>\n          <img src=\"images/6.jpg\" alt=\" \" class=\"img-responsive\" />\n          <p> Check out our full selection of snacks.</p>\n        </div>\n        <div class=\"col-md-6 footer-copy-grid\">\n          <h3>Send a <span>message</span></h3>\n          <form action=\"https://formspree.io/marleyssnacks@gmail.com\" method=\"POST\">\n            <input type=\"text\" name=\"name\" value=\"Name\" onfocus=\"this.value = '';\" onblur=\"if (this.value == '') {this.value = 'Name';}\" required=\"\">\n            <input type=\"email\" name=\"_replyto\" value=\"Email\" onfocus=\"this.value = '';\" onblur=\"if (this.value == '') {this.value = 'Email';}\" required=\"\">\n            <textarea type=\"text\" name=\"message\" onfocus=\"this.value = '';\" onblur=\"if (this.value == '') {this.value = 'Message...';}\" required=\"\">Message...</textarea>\n            <input type=\"text\" name=\"_gotcha\" style=\"display:none\" />\n            <input type=\"hidden\" name=\"_next\" value=\"/\" />\n            <input type=\"submit\" value=\"Submit\" >\n          </form>\n        </div>\n\n        <div class=\"col-md-3 footer-copy-grid\">\n          <h3>Navigation</h3>\n          <ul>\n"
     + ((stack1 = helpers.each.call(depth0 != null ? depth0 : {},(depth0 != null ? depth0.navigation : depth0),{"name":"each","hash":{},"fn":container.program(1, data, 0),"inverse":container.noop,"data":data})) != null ? stack1 : "")
     + "          </ul>\n        </div>\n        <div class=\"clearfix\"> </div>\n      </div>\n    </div>\n  </div>";
 },"useData":true});
 
 this["Marley"]["Templates"]["contactSection"] = Handlebars.template({"compiler":[7,">= 4.0.0"],"main":function(container,depth0,helpers,partials,data) {
-    return "<div class=\"footer-top animated wow zoomInDown\" data-wow-duration=\"1000ms\" data-wow-delay=\"800ms\">\n  <div class=\"container\">\n    <h3>For more information feel free to <span>call or email</span></h3>\n    <p>Ask for <span>Robin :)</span></p>\n    <div class=\"more\">\n      <a href=\"contact.html\">Contact Us</a>\n    </div>\n  </div>\n</div>";
+    return "<div class=\"footer-top animated wow zoomInDown\" data-wow-duration=\"1000ms\" data-wow-delay=\"800ms\">\n  <div class=\"container\">\n    <h3>For more information feel free to <span>call or email</span></h3>\n    <p>Ask for <span>Robin :)</span></p>\n    <div class=\"more\">\n      <a href=\"/contact\">Contact Us</a>\n    </div>\n  </div>\n</div>";
 },"useData":true});
 
 this["Marley"]["Templates"]["head"] = Handlebars.template({"compiler":[7,">= 4.0.0"],"main":function(container,depth0,helpers,partials,data) {
@@ -44,7 +48,7 @@ this["Marley"]["Templates"]["headerLeft"] = Handlebars.template({"compiler":[7,"
 this["Marley"]["Templates"]["headerRight"] = Handlebars.template({"1":function(container,depth0,helpers,partials,data) {
     var helper, alias1=depth0 != null ? depth0 : {}, alias2=helpers.helperMissing, alias3="function", alias4=container.escapeExpression;
 
-  return "    <li>\n      <a data-scroll href=\""
+  return "    <li>\n      <a href=\""
     + alias4(((helper = (helper = helpers.link || (depth0 != null ? depth0.link : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"link","hash":{},"data":data}) : helper)))
     + "\"><i class=\"glyphicon "
     + alias4(((helper = (helper = helpers.icon || (depth0 != null ? depth0.icon : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"icon","hash":{},"data":data}) : helper)))
@@ -99,4 +103,167 @@ this["Marley"]["Templates"]["products"] = Handlebars.template({"1":function(cont
   return "<ul id=\"flexiselDemo1\"> \n"
     + ((stack1 = helpers.each.call(depth0 != null ? depth0 : {},(depth0 != null ? depth0.products : depth0),{"name":"each","hash":{},"fn":container.program(1, data, 0),"inverse":container.noop,"data":data})) != null ? stack1 : "")
     + "\n  <script type=\"text/javascript\">\n    $(window).load(function() {\n    $(\"#flexiselDemo1\").flexisel({\n      visibleItems: 5,\n      animationSpeed: 1000,\n      autoPlay: true,\n      autoPlaySpeed: 3000,        \n      pauseOnHover: true,\n      enableResponsiveBreakpoints: true,\n      responsiveBreakpoints: { \n        portrait: { \n          changePoint:480,\n          visibleItems: 1\n        }, \n        landscape: { \n          changePoint:640,\n          visibleItems: 2\n        },\n        tablet: { \n          changePoint:768,\n          visibleItems: 3\n        }\n      }\n    });\n    \n   });\n  </script>\n</ul>";
-},"useData":true});
+},"useData":true});;$(function() {
+
+  var contactInfo = { address: "1014 Dundas Street West, Toronto",
+                  phone: "(647) 977-9394",
+                  email: "marleyssnacks@gmail.com"
+                }
+
+  var navigation = { navigation: [
+      { link: '/', icon: 'glyphicon-home', text: 'Home' },
+      { link: '/products', icon: 'glyphicon-list', text: 'Products' },
+      { link: '/contact', icon: 'glyphicon-envelope', text: 'Contact' }
+    ]
+  }
+
+  var productList = [
+      { 
+        itemsub: "item-sub",
+        image: '1.jpg',
+        title: 'Duck feet',
+        description: 'The hollow bones are great for cleaning your dog\'s teeth.',
+        price: '$35 for 1 kilo'
+      },
+      { 
+        itemsub: "item-sub1",
+        title: 'Chicken feet',
+        image: 'chicken_feet.jpg',
+        description: 'The hollow bones are great for cleaning your dog\'s teeth.',
+        price: '$30 for 1 kilo'
+      },
+      { 
+        itemsub: "item-sub2",
+        image: 'beef_liver.jpg',
+        title: 'Beef liver',
+        description: 'Nutrient rich and breaks in to smaller pieces for easy carrying.',
+        price: '$40 for 1 kilo'
+      },
+      { 
+        itemsub: "item-sub3",
+        title: 'Salmon tails',
+        image: 'beef_liver.jpg',
+        description: 'Delicious, crunchy and full of healthy fats.',
+        price: '$40 for 1 kilo'
+      },
+      { 
+        itemsub: "item-sub4",
+        title: 'Sweet potato slices',
+        image: 'sweet_potato.jpg',
+        description: 'Specially made for sweet doggies.',
+        price: '$27 for 1 kilo'
+      },
+      { 
+        itemsub: "item-sub5",
+        title: 'Cow lung',
+        image: 'sweet_potato.jpg',
+        description: 'A light and delicious snack.',
+        price: '$30 for 1 kilo'
+      },
+    ]
+
+  var allProducts = { products: productList.slice() }
+  var highlightedProducts = { products: productList.slice(0,5) }
+
+  $('div.header').append(Marley.Templates.headerLeft(contactInfo));
+  $('div.header').append(Marley.Templates.headerRight(navigation));
+  $('div.product-list').append(Marley.Templates.products(highlightedProducts));
+  $('div.product-details').append(Marley.Templates.productDetails(allProducts))
+  $('div.contact-section').append(Marley.Templates.contactSection({}))
+  $('div.big-footer').append(Marley.Templates.bigFooter(navigation))
+  $('div.little-footer').append(Marley.Templates.littleFooter({}))
+});function loadMap() {
+  var locations = [
+    {
+      title: "Bloorcourt Vet Clinic",
+      address: "1079 Bloor Street West, Toronto, ON",
+      latlng: new google.maps.LatLng(43.660148,-79.4343243)
+    },
+    {
+      title: "Helmutt's Pet Supply",
+      address: "865 Queen Street West, Toronto, ON",
+      latlng: new google.maps.LatLng(43.645715, -79.410608)
+    },
+    {
+      title: "The Dog Bowl",
+      address: "984 Dundas Street West, Toronto, ON",
+      latlng: new google.maps.LatLng(43.650540, -79.415198)
+    },
+    {
+      title: "Pet Uno",
+      address: "675 College Street, Toronto, ON",
+      latlng: new google.maps.LatLng(43.654953, -79.417198)
+    },
+    {
+      title: "Pet Valu",
+      address: "75 Ellesmere Road, Toronto, ON",
+      latlng: new google.maps.LatLng(43.758171, -79.312282)
+    },
+    {
+      title: "Pet Valu",
+      address: "1527 Victoria Park Ave, Toronto, ON",
+      latlng: new google.maps.LatLng(43.726395, -79.302074)
+    },
+    {
+      title: "Pet Valu",
+      address: "339 College Street, Toronto, ON",
+      latlng: new google.maps.LatLng(43.657171, -79.402658)
+    },
+    {
+      title: "Petview",
+      address: "322 Queen St W, Toronto, ON",
+      latlng: new google.maps.LatLng(43.649405, -79.394373)
+    },
+    {
+      title: "Dogee Spa",
+      address: "179 Avenue Rd, Toronto, ON",
+      latlng: new google.maps.LatLng(43.675073, -79.396542)
+    }
+  ]
+
+  var myLatLng = {lat: 43.647743, lng: -79.414153};
+  var bounds = new google.maps.LatLngBounds();
+
+  var map = new google.maps.Map(document.getElementById('locations-map'), {
+    center: myLatLng,
+    scrollwheel: false,
+    zoom: 4
+  });
+
+  var infowindow = new google.maps.InfoWindow()
+
+  var placeMarker = function(location) {
+    var marker = new google.maps.Marker({
+      map: map,
+      position: location.latlng,
+      title: location.title
+    });
+
+    var generateContent = function() {
+      var p1 = document.createElement("strong")
+      var p2 = document.createElement("p")
+      var div = document.createElement("div")
+      var title = document.createTextNode(location.title)
+      var address = document.createTextNode(location.address)
+      p1.appendChild(title)
+      p1.className = "text-uppercase"
+      p2.appendChild(address)
+      div.appendChild(p1)
+      div.appendChild(p2)
+      return div
+    }
+
+    marker.addListener('click', function() {
+      infowindow.setContent(generateContent())
+      infowindow.open(map, marker);
+    });
+    bounds.extend(location.latlng)
+  }
+
+  for (var i = 0; i < locations.length; i++ ) {
+    placeMarker(locations[i])
+  }
+
+  map.fitBounds(bounds);
+
+}

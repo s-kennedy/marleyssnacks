@@ -13,6 +13,7 @@
             <input type="email" name="_replyto" value="Email" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Email';}" required="">
             <textarea type="text" name="message" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Message...';}" required="">Message...</textarea>
             <input type="text" name="_gotcha" style="display:none" />
+            <input type="hidden" name="_next" value="/" />
             <input type="submit" value="Submit" >
           </form>
         </div>
@@ -21,7 +22,7 @@
           <h3>Navigation</h3>
           <ul>
             {{#each navigation}}
-            <li><a data-scroll href="{{link}}">{{text}}</a></li>
+            <li><a href="{{link}}">{{text}}</a></li>
             {{/each}}
           </ul>
         </div>

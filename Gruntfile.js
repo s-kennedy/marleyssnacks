@@ -12,30 +12,23 @@ module.exports = function(grunt) {
           bootstrap: 'dist/css/bootstrap.min.css',
           'smooth-scroll': 'dist/js/smooth-scroll.min.js',
           masonry: 'dist/masonry.pkgd.min.js',
-          wow: 'dist/wow.min.js' 
+          wow: 'dist/wow.min.js' ,
+          easing: 'easing-min.js'
         },
         bowerOptions: {
           relative: false
         }
       }
     },
-    // uglify: {
-    //   my_target: {
-    //     files: {
-    //       'build/js/lib.min.js' : 'src/js/_bower.js'
-    //     }
-    //   }
-    // },
-    // cssmin: {
-    //   options: {
-    //     keepSpecialComments: 0
-    //   },
-    //   target: {
-    //     files: {
-    //       'build/css/styles.min.css' : 'src/css/_bower.css'
-    //     },
-    //   }
-    // },
+    concat: {
+      options: {
+        separator: ';',
+      },
+      dist: {
+        src: ['src/js/move-top.js', 'src/js/hbs.js', 'src/js/templates.js', 'src/js/maps.js'],
+        dest: 'build/js/custom.js',
+      },
+    },
     handlebars: {
       compile: {
         options: {
@@ -46,7 +39,7 @@ module.exports = function(grunt) {
           }
         },
         files: {
-          'build/js/hbs.js': 'src/templates/*.hbs'
+          'src/js/hbs.js': 'src/templates/*.hbs'
         }
       }
     },
@@ -56,19 +49,17 @@ module.exports = function(grunt) {
           { expand: true, flatten: true, src: ['src/images/*'], dest: 'build/images' },
           { expand: true, flatten: true, src: ['src/fonts/*'], dest: 'build/fonts'},
           { expand: true, flatten: true, src: ['src/files/*'], dest: 'build'},
-          { expand: true, flatten: true, src: ['src/css/style.css'], dest: 'build/css'},
-          { expand: true, flatten: true, src: ['src/js/*'], dest: 'build/js'},
-          ]
+          { expand: true, flatten: true, src: ['src/css/style.css'], dest: 'build/css'}
+        ]
       }
     }
   });
 
   grunt.loadNpmTasks('grunt-bower-concat');
-  grunt.loadNpmTasks('grunt-contrib-uglify');
-  grunt.loadNpmTasks('grunt-contrib-cssmin');
+  grunt.loadNpmTasks('grunt-contrib-concat');
   grunt.loadNpmTasks('grunt-contrib-handlebars');
   grunt.loadNpmTasks('grunt-contrib-copy');
 
-  grunt.registerTask('default', ['handlebars', 'bower_concat', 'copy']);
+  grunt.registerTask('default', ['handlebars', 'bower_concat', 'concat', 'copy']);
 
 };
