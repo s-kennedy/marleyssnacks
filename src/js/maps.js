@@ -56,11 +56,32 @@ function loadMap() {
     zoom: 4
   });
 
+  var infowindow = new google.maps.InfoWindow()
+
   var placeMarker = function(location) {
     var marker = new google.maps.Marker({
       map: map,
       position: location.latlng,
       title: location.title
+    });
+
+    var generateContent = function() {
+      var p1 = document.createElement("strong")
+      var p2 = document.createElement("p")
+      var div = document.createElement("div")
+      var title = document.createTextNode(location.title)
+      var address = document.createTextNode(location.address)
+      p1.appendChild(title)
+      p1.className = "text-uppercase"
+      p2.appendChild(address)
+      div.appendChild(p1)
+      div.appendChild(p2)
+      return div
+    }
+
+    marker.addListener('click', function() {
+      infowindow.setContent(generateContent())
+      infowindow.open(map, marker);
     });
     bounds.extend(location.latlng)
   }
