@@ -1,7 +1,7 @@
 $(function() {
 
   var contactInfo = { address: "1014 Dundas Street West, Toronto",
-                  phone: "(647) 977-9394",
+                  phone: "(647) 858-1125",
                   email: "marleyssnacks@gmail.com"
                 }
 
@@ -15,45 +15,52 @@ $(function() {
   var productList = [
       { 
         itemsub: "item-sub",
-        image: '1.jpg',
-        title: 'Duck feet',
-        description: 'The hollow bones are great for cleaning your dog\'s teeth.',
-        price: '$35 for 1 kilo'
-      },
-      { 
-        itemsub: "item-sub1",
         title: 'Chicken feet',
         image: 'chicken_feet.jpg',
         description: 'The hollow bones are great for cleaning your dog\'s teeth.',
         price: '$30 for 1 kilo'
       },
       { 
-        itemsub: "item-sub2",
+        itemsub: "item-sub1",
         image: 'beef_liver.jpg',
         title: 'Beef liver',
-        description: 'Nutrient rich and breaks in to smaller pieces for easy carrying.',
+        description: 'Nutrient rich and easy to carry.',
         price: '$40 for 1 kilo'
       },
       { 
-        itemsub: "item-sub3",
+        itemsub: "item-sub2",
         title: 'Salmon tails',
-        image: 'beef_liver.jpg',
+        image: 'salmon_tails.jpg',
         description: 'Delicious, crunchy and full of healthy fats.',
         price: '$40 for 1 kilo'
       },
       { 
-        itemsub: "item-sub4",
-        title: 'Sweet potato slices',
-        image: 'sweet_potato.jpg',
-        description: 'Specially made for sweet doggies.',
+        itemsub: "item-sub3",
+        title: 'Chicken trachea',
+        image: 'chicken_trachea.jpg',
+        description: 'A healthy and nutritious snack.',
         price: '$27 for 1 kilo'
       },
       { 
-        itemsub: "item-sub5",
-        title: 'Cow lung',
-        image: 'sweet_potato.jpg',
+        itemsub: "item-sub4",
+        title: 'Beef lung',
+        image: 'beef_lung.jpg',
         description: 'A light and delicious snack.',
         price: '$30 for 1 kilo'
+      },
+      {
+        itemsub: "item-sub5",
+        title: 'Sweet potato',
+        image: 'sweet_potato.jpg',
+        description: 'Specially made for sweet doggies.',
+        price: '$30 for 1 kilo'
+      },
+      { 
+        itemsub: "item-sub6",
+        image: 'duck_feet.jpg',
+        title: 'Duck feet',
+        description: 'The hollow bones are great for cleaning your dog\'s teeth.',
+        price: '$35 for 1 kilo'
       },
     ]
 

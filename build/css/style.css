@@ -414,7 +414,7 @@ padding: 70px 0 165px 0;
 }
 /*--//flexisel--*/
 .item-sub{
-	background:url(../images/1.jpg) no-repeat 0px 0px;
+	background:url(../images/chicken_feet.jpg) no-repeat center center;
 	background-size:cover;
 	-webkit-background-size:cover;
 	-moz-background-size:cover;
@@ -422,7 +422,7 @@ padding: 70px 0 165px 0;
 	-ms-background-size:cover;
 }
 .item-sub1{
-	background:url(../images/chicken_feet.jpg) no-repeat 0px 0px;
+	background:url(../images/beef_liver.jpg) no-repeat center center;
 	background-size:cover;
 	-webkit-background-size:cover;
 	-moz-background-size:cover;
@@ -430,7 +430,7 @@ padding: 70px 0 165px 0;
 	-ms-background-size:cover;
 }
 .item-sub2{
-	background:url(../images/beef_liver.jpg) no-repeat 0px 0px;
+	background:url(../images/salmon_tails.jpg) no-repeat center center;
 	background-size:cover;
 	-webkit-background-size:cover;
 	-moz-background-size:cover;
@@ -438,7 +438,7 @@ padding: 70px 0 165px 0;
 	-ms-background-size:cover;
 }
 .item-sub3{
-	background:url(../images/4.jpg) no-repeat 0px 0px;
+	background:url(../images/chicken_trachea.jpg) no-repeat center center;
 	background-size:cover;
 	-webkit-background-size:cover;
 	-moz-background-size:cover;
@@ -446,7 +446,7 @@ padding: 70px 0 165px 0;
 	-ms-background-size:cover;
 }
 .item-sub4{
-  background:url(../images/sweet_potato.jpg) no-repeat 0px 0px;
+  background:url(../images/beef_lung.jpg) no-repeat center center;
   background-size:cover;
   -webkit-background-size:cover;
   -moz-background-size:cover;
@@ -460,11 +460,13 @@ padding: 70px 0 165px 0;
 	font-size:2em;
 	color:#fff;
 	top:4em;
+  text-shadow: #AFB7B3 1px 1px 1px;
 }
 .item1 h3{
 	font-size: 3.5em;
     color: #fff;
     margin:3em 0 0em;
+    text-shadow: #AFB7B3 1px 1px 1px;
 }
 .item1 p{
 	font-size:14px;
